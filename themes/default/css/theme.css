@@ -329,3 +329,18 @@ body .codedemo:after {
   font-size: 14px;
 }
 
+
+
+.kalei-clearfix:before,
+.kalei-clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.kalei-clearfix:after {
+    clear: both;
+}
+
+.kalei-clearfix {
+    *zoom: 1;
+}
