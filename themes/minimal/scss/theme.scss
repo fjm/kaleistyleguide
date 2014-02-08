@@ -1,0 +1,427 @@
+/* ------------------------------
+# plain Themes
+
+sass --watch scss:css
+
+------------------------------ */
+
+// placeholder
+// ==============================
+
+%reset {
+  margin:0;
+  padding:0;
+}
+
+%font-family {
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+
+
+// mixin
+// ==============================
+
+$support-browser-prefix : -webkit-, -moz-, -ms-, -o-, "";
+
+// transition
+@mixin transition($value:all 0.2s ease) {
+
+  @each $prefix in $support-browser-prefix {
+    #{$prefix}transition: $value;
+  }
+
+}
+
+
+
+
+// base
+// ==============================
+@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600');
+
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+
+
+// kalei - /templates/layout.html
+// ==============================
+.kalei {
+  color:#000;
+}
+
+
+
+
+
+// kalei - /templates/page.html
+// ==============================
+.kalei-style-page {
+  padding-top:100px;
+  padding-bottom:100px !important;
+}
+
+
+.kalei-documentation {
+  position: relative;
+}
+
+
+.kalei-comments-container {
+  position: relative;
+  width: 100%;
+}
+
+
+// .kalei-comments ------------------------------
+.kalei-comments {
+  padding: 20px;
+  margin: 0 0 50px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+
+
+.kalei-comments > {
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    line-height:1.8;
+    font-family:serif;
+    font-kerning:normal;
+    -webkit-font-kerning:normal;
+    &:before {
+      color:#ccc;
+      font-size:12px;
+      display:inline-block;
+      padding-right:8px;
+      vertical-align: 5%;
+    }
+
+  }
+
+  h1 {
+    line-height:1.4;
+    &:before {
+      content: "# ";
+    }
+  }
+
+
+  h2 {
+    line-height:1.5;
+    &:before {
+      content: "## ";
+    }
+  }
+
+  h3 {
+    line-height:1.6;
+    &:before {
+      content: "### ";
+    }
+  }
+
+  h4 {
+    line-height:1.7;
+    &:before {
+      content: "#### ";
+    }
+  }
+
+  h4:before {
+    content: "#### ";
+    font-size:10px;
+  }
+
+  h5:before {
+    content: "##### ";
+    font-size:10px;
+  }
+
+  h6:before {
+    content: "###### ";
+    font-size:10px;
+  }
+
+}
+
+
+
+.kalei-comments > {
+
+  p, ul, ol, iframe, table {
+    font-size:14px;
+    line-height:1.8;
+    margin:1em 0;
+    color:#333;
+    font-family:Helvetica, Arial, san-serif;
+  }
+
+  ul, ol {
+    margin-left:-1.5em;
+  }
+
+
+}
+
+
+// codedemo ------------------------------
+.kalei-comments {
+
+  .codedemo {
+    position: relative;
+    margin-top:20px;
+    padding: 40px 20px 20px;
+    margin-left:-20px;
+    margin-right:-20px;
+    border-top:1px solid #ddd;
+
+    &:after {
+      content: "Example";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 5px 20px;
+      font-size: 10px;
+      line-height:1;
+      background-color: #eee;
+      color:#666;
+    }
+
+  }
+
+}
+
+
+// code ------------------------------
+.kalei-comments {
+
+  & > pre {
+    position: relative;
+    margin:0 -20px 0 -20px;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    background:#fafafa;
+
+
+    & > code {
+      font-size: 12px;
+      white-space: pre-wrap;
+      @extend %font-family;
+      background:transparent;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+// # kalei - /templates/menu.html
+// ==============================
+.kalei-style-menu-container {
+  position: fixed;
+  width: 100%;
+  z-index:9999;
+}
+
+
+.kalei-styleguide-menu-wrapper {
+  position:relative;
+  background-color: rgba(245, 245, 245, 0.8);
+
+  .kalei-styleguide-menu-items {
+  }
+
+  &:hover {
+
+    .kalei-styleguide-menu-heading h1 {
+      &:hover:after {
+        border-width: 0 6px 6px 6px;
+        border-color: transparent transparent #000 transparent;
+      }
+    }
+
+    .kalei-styleguide-menu-items {
+      height:350px;
+      display:block;
+      opacity:1;
+    }
+
+  }
+
+}
+
+// title ------------------------------
+.kalei-styleguide-menu-heading {
+  text-decoration:none;
+
+  h1 {
+    position:relative;
+    @extend %reset;
+    font-size:14px;
+    color:#000;
+    padding:20px;
+    font-family:serif;
+
+    // Arrow
+    &:after {
+      position:absolute;
+      right:20px;
+      top:30px;
+      content: "";
+      margin-left:10px;
+      margin-top: -6px;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: #000 transparent transparent transparent;
+      @include transition(all 0.3s ease);
+    }
+
+  }
+
+}
+
+
+.kalei-styleguide-menu-items {
+  position:absolute;
+  width:60%;
+  max-width:280px;
+  top:40px;
+  right:20px;
+  background:#fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size:12px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  border-radius:5px;
+  height:0;
+  opacity:0;
+  @include transition();
+
+}
+
+
+.kalei-styleguide-menu {
+  @extend %reset;
+  list-style:none;
+  font-family:Helvetica, Arial, san-serif;
+
+  & > li {
+    @extend %reset;
+
+    // CSS Category Title
+    & > h3 {
+      margin: 0;
+      padding: 10px;
+      font-size:12px;
+      border-bottom:1px solid #ccc;
+    }
+
+  }
+
+}
+
+
+.kalei-sheet-submenu {
+  ul {
+    @extend %reset;
+    list-style:none;
+
+    li {
+      position:relative;
+      margin:0px;
+      padding:10px 10px 10px 30px;
+      width:100%;
+      border-bottom:1px dotted #ccc;
+      box-sizing:border-box;
+      cursor:pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow:hidden;
+      @include transition();
+
+
+      // Arrow
+      &:after {
+        display: block;
+        content: "-";
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        margin-top: -10px;
+        color:#999;
+      }
+
+      &.active {
+        background:#eee;
+      }
+
+      &:hover {
+        background:#f5f5f5;
+      }
+
+    }
+  }
+}
+
+
+.kalei-styleguide-menu-children {
+  @extend %reset;
+  list-style:none;
+}
+
+
+.kalei-styleguide-menu-link {
+  display: block;
+  position: relative;
+  height: 100%;
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  color:#000;
+  @include transition();
+
+
+  &:hover, &.active {
+    color: #fff;
+    background-color: #999;
+  }
+
+  // Arrow
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: transparent #999;
+  }
+
+  &:hover:after,
+  &.active:after {
+    margin-top:-3px;
+    margin-left:-3px;
+    border-width: 6px 6px 0 6px;
+    border-color: #fff transparent transparent transparent;
+  }
+}
+
