@@ -1,11 +1,11 @@
 @import url("//fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600");
 /* ------------------------------
-# plain Themes
+# minimal Themes
 
 sass --watch scss:css
 
 ------------------------------ */
-.kalei-styleguide-menu-heading h1, .kalei-styleguide-menu, .kalei-styleguide-menu > li, .kalei-sheet-submenu ul, .kalei-styleguide-menu-children {
+.kalei-comments > ul, .kalei-comments > ol, .kalei-styleguide-menu-heading h1, .kalei-styleguide-menu, .kalei-styleguide-menu > li, .kalei-sheet-submenu ul, .kalei-styleguide-menu-children {
   margin: 0;
   padding: 0; }
 
@@ -20,7 +20,7 @@ body {
   color: #000; }
 
 .kalei-style-page {
-  padding-top: 100px;
+  padding-top: 80px;
   padding-bottom: 100px !important; }
 
 .kalei-documentation {
@@ -32,7 +32,6 @@ body {
 
 .kalei-comments {
   padding: 20px;
-  margin: 0 0 50px 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -41,7 +40,7 @@ body {
 
 .kalei-comments > h1, .kalei-comments > h2, .kalei-comments > h3, .kalei-comments > h4, .kalei-comments > h5, .kalei-comments > h6 {
   margin: 0;
-  padding: 0;
+  padding: 40px 0 0 0;
   line-height: 1.8;
   font-family: serif;
   font-kerning: normal;
@@ -85,7 +84,7 @@ body {
   color: #333;
   font-family: Helvetica, Arial, san-serif; }
 .kalei-comments > ul, .kalei-comments > ol {
-  margin-left: -1.5em; }
+  margin-left: 1.5em; }
 
 .kalei-comments .codedemo {
   position: relative;

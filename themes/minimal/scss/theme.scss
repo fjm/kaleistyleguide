@@ -1,5 +1,5 @@
 /* ------------------------------
-# plain Themes
+# minimal Themes
 
 sass --watch scss:css
 
@@ -62,7 +62,7 @@ body {
 // kalei - /templates/page.html
 // ==============================
 .kalei-style-page {
-  padding-top:100px;
+  padding-top:80px;
   padding-bottom:100px !important;
 }
 
@@ -81,7 +81,6 @@ body {
 // .kalei-comments ------------------------------
 .kalei-comments {
   padding: 20px;
-  margin: 0 0 50px 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -95,7 +94,7 @@ body {
 
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: 0;
+    padding: 40px 0 0 0;
     line-height:1.8;
     font-family:serif;
     font-kerning:normal;
@@ -169,7 +168,8 @@ body {
   }
 
   ul, ol {
-    margin-left:-1.5em;
+    @extend %reset;
+    margin-left:1.5em;
   }
 
 
