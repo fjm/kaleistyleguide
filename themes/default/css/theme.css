@@ -18,6 +18,15 @@ body {
   padding: 0 !important;
 }
 
+.kalei {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
 .kalei-style-menu-container {
   position: fixed;
   width: 300px;
@@ -31,6 +40,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
 
 .kalei-style-page {
   margin-left: 300px;
@@ -243,11 +253,13 @@ body .codedemo {
   color: #222;
 }
 
-*:not(.codedemo) .kalei-styleguide-menu {
+*:not(.codedemo) .kalei-styleguide-menu,
+*:not(.codedemo) .kalei-styleguide-menu-children {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 
 body .codedemo:after {
   content: "Example";
@@ -264,6 +276,22 @@ body .codedemo:after {
 }
 
 
+.kalei-styleguide-menu-heading {
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.kalei-styleguide-menu-items {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    bottom: 0 !important;
+}
+
+
 .kalei-styleguide-menu-stylesheets {
   margin-top: 20px;
   padding: 10px 20px;
@@ -274,7 +302,7 @@ body .codedemo:after {
   text-shadow: 0 0 1px #777;
 }
 
-.kalei-styleguide-menu > li > h3 {
+.kalei-styleguide-menu-childrens > li > h3 {
   margin-top: 20px;
   padding-left: 20px;
   color: #444;
