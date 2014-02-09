@@ -86,6 +86,10 @@ body {
 .kalei-comments > ul, .kalei-comments > ol {
   margin-left: 1.5em; }
 
+.kalei-comments code {
+  background: #eee;
+  display: inline-block;
+  padding: 3px 5px; }
 .kalei-comments .codedemo {
   position: relative;
   margin-top: 20px;
@@ -114,7 +118,8 @@ body {
   .kalei-comments > pre > code {
     font-size: 12px;
     white-space: pre-wrap;
-    background: transparent; }
+    background: transparent;
+    padding: 0px; }
 
 .kalei-style-menu-container {
   position: fixed;

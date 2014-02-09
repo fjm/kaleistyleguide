@@ -43,6 +43,8 @@ These styles make sure the css code block is floated to the right correctly and 
 /*
 ## Code demos
 
+Inline code `Inline Code`
+
 When you use Markdown code blocks ```, Kalei automatically renders the code as HTML and beneath it shows the code block with syntax highlighting.
 ```
 <pre>
