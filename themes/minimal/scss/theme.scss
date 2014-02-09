@@ -178,13 +178,6 @@ body {
 // codedemo ------------------------------
 .kalei-comments {
 
-  // inline code
-  code {
-    background:#eee;
-    display:inline-block;
-    padding:3px 5px;
-  }
-
   // code block
   .codedemo {
     position: relative;
@@ -215,12 +208,22 @@ body {
 // code ------------------------------
 .kalei-comments {
 
+  // inline code
+  code {
+    background:#eee;
+    display:inline-block;
+    padding:3px 5px;
+  }
+
+  // block code
   & > pre {
     position: relative;
     margin:0 -20px 0 -20px;
     padding: 20px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
     background:#fafafa;
+    max-height:200px;
+    overflow-y:auto;
 
 
     & > code {
@@ -234,8 +237,6 @@ body {
   }
 
 }
-
-
 
 
 
@@ -433,3 +434,5 @@ body {
   }
 }
 
+/* ### Third Party ### */
+@import url("highlight/styles/googlecode.css");
